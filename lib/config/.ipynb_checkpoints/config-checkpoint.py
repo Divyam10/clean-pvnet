@@ -148,7 +148,7 @@ def make_cfg(args):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--cfg_file", default="/home/ai/pose_est/clean-pvnet-1.10-bpnp/configs/custom_50.yaml", type=str)
+parser.add_argument("--cfg_file", default="/home/ai/pose_est/clean-pvnet-1.10/configs/custom_50.yaml", type=str)
 parser.add_argument('--test', action='store_true', dest='test', default=False)
 parser.add_argument("--type", type=str, default="demo")
 parser.add_argument('--det', type=str, default='')

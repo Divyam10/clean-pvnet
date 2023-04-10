@@ -95,11 +95,9 @@ class Resnet18(nn.Module):
 
         ret = {'seg': seg_pred, 'vertex': ver_pred}
 
-        # if not self.training:
-        #     with torch.no_grad():
-        #         self.decode_keypoint(ret)
-        
-        self.decode_keypoint(ret)
+        if not self.training:
+            with torch.no_grad():
+                self.decode_keypoint(ret)
 
         return ret
 

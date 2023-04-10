@@ -1,6 +1,5 @@
 __pycache__/
 .idea/
-.ipynb_checkpoints/
 *.py[cod]
 *.so
 *.orig
@@ -8,6 +7,8 @@ __pycache__/
 *.json
 *.pth
 *.jpg
-*.ipynb
 *.npy
+data/linemod
+*.onnx
+*.ptl
 
