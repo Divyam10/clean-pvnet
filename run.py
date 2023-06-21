@@ -203,7 +203,7 @@ def run_render():
 
     obj_path = 'data/linemod/cat/cat.ply'
     model = inout.load_ply(obj_path)
-    model['pts'] = model['pts'] * 1000.
+    model['pts'] = model['pts'] * 1000
     im_size = (640, 300)
     opengl = opengl_utils.NormalRender(model, im_size)
 

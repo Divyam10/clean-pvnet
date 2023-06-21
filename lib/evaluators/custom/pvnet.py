@@ -24,6 +24,7 @@ class Evaluator:
         data_root = args['data_root']
         model_path = 'data/custom/model.ply'
         self.model = pvnet_data_utils.get_ply_model(model_path)
+        print("current directory:"  + os.curdir)
         self.diameter = np.loadtxt('data/custom/diameter.txt').item()
 
         self.proj2d = []

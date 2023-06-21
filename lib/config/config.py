@@ -12,7 +12,7 @@ cfg.det_model = ''
 cfg.kpt_model = ''
 
 # network
-cfg.network = 'dla_34'
+cfg.network = 'dla_18'
 
 # network heads
 cfg.heads = ''

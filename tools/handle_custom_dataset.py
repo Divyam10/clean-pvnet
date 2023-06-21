@@ -54,7 +54,7 @@ def record_ann(model_meta, img_id, ann_id, images, annotations):
     inds = range(len(os.listdir(rgb_dir)))
 
     for ind in tqdm.tqdm(inds):
-        rgb_path = os.path.join(rgb_dir, '{}.jpg'.format(ind))
+        rgb_path = os.path.join(rgb_dir, '{}.png'.format(ind))
 
         rgb = Image.open(rgb_path)
         img_size = rgb.size
@@ -101,7 +101,11 @@ def custom_to_coco(data_root):
         'fps_3d': fps_3d,
         'data_root': data_root,
     }
+    kpt_3d = np.vstack([fps_3d, center_3d])
+    dict_meta = {'K': K, 'corner_3d': corner_3d, 'center_3d': center_3d, 'kpt_3d': kpt_3d}
+    print(dict_meta)
 
+    np.save("/home/ai/pose_est/clean-pvnet-1.10-bpnp/meta.npy", dict_meta)
     img_id = 0
     ann_id = 0
     images = []
